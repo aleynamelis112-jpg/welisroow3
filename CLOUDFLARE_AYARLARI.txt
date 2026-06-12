@@ -1,0 +1,9 @@
+Cloudflare Pages için ayarlar:
+
+Framework preset: Next.js
+Build command: npm run build
+Build output directory: out
+Root directory: boş bırak
+
+Not: wrangler.toml dosyası özellikle kaldırıldı. Bu proje statik export olarak çalışır.
+GitHub'a yükledikten sonra Cloudflare Pages üzerinden bağla.

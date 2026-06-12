@@ -1,0 +1,92 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 22 74% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 22 74% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 22 74% 12%;
+    --primary: 22 74% 18%;
+    --primary-foreground: 30 50% 98%;
+    --secondary: 16 76% 96%;
+    --secondary-foreground: 22 74% 18%;
+    --muted: 30 20% 92%;
+    --muted-foreground: 22 20% 40%;
+    --accent: 16 76% 61%;
+    --accent-foreground: 30 50% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 22 20% 88%;
+    --input: 22 20% 88%;
+    --ring: 16 76% 61%;
+    --radius: 1rem;
+    --sidebar-background: 22 74% 18%;
+    --sidebar-foreground: 30 50% 98%;
+    --sidebar-primary: 16 76% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 22 74% 25%;
+    --sidebar-accent-foreground: 30 50% 98%;
+    --sidebar-border: 22 74% 22%;
+    --sidebar-ring: 16 76% 61%;
+  }
+
+  .dark {
+    --background: 22 74% 8%;
+    --foreground: 30 50% 98%;
+    --card: 22 74% 10%;
+    --card-foreground: 30 50% 98%;
+    --popover: 22 74% 10%;
+    --popover-foreground: 30 50% 98%;
+    --primary: 30 50% 98%;
+    --primary-foreground: 22 74% 18%;
+    --secondary: 22 74% 15%;
+    --secondary-foreground: 30 50% 98%;
+    --muted: 22 74% 15%;
+    --muted-foreground: 30 20% 70%;
+    --accent: 16 76% 61%;
+    --accent-foreground: 30 50% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 30 50% 98%;
+    --border: 22 74% 18%;
+    --input: 22 74% 18%;
+    --ring: 16 76% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased selection:bg-accent/30;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.wood-gradient {
+  background: linear-gradient(135deg, rgba(81, 38, 12, 0.05) 0%, rgba(230, 119, 80, 0.05) 100%);
+}
+
+.text-gold {
+  @apply text-accent font-semibold;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

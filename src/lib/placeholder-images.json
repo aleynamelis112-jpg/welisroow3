@@ -1,0 +1,46 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-main",
+      "description": "Luxurious wood interior with root wood table",
+      "imageUrl": "https://picsum.photos/seed/woodhero/1920/1080",
+      "imageHint": "luxury wood furniture interior"
+    },
+    {
+      "id": "product-epoxy-table",
+      "description": "Live edge epoxy resin dining table",
+      "imageUrl": "https://picsum.photos/seed/epoxy/800/600",
+      "imageHint": "epoxy wood table"
+    },
+    {
+      "id": "product-root-coffee",
+      "description": "Natural root wood coffee table",
+      "imageUrl": "https://picsum.photos/seed/root/800/600",
+      "imageHint": "root wood coffee table"
+    },
+    {
+      "id": "product-wall-clock",
+      "description": "Handcrafted olive wood wall clock",
+      "imageUrl": "https://picsum.photos/seed/clock/800/600",
+      "imageHint": "wood wall clock"
+    },
+    {
+      "id": "product-wood-panel",
+      "description": "Decorative wood wall paneling",
+      "imageUrl": "https://picsum.photos/seed/panel/800/600",
+      "imageHint": "wood wall panel"
+    },
+    {
+      "id": "product-mirror",
+      "description": "Natural edge wood framed mirror",
+      "imageUrl": "https://picsum.photos/seed/mirror/800/600",
+      "imageHint": "wood mirror frame"
+    },
+    {
+      "id": "about-woodshop",
+      "description": "Traditional woodworking workshop",
+      "imageUrl": "https://picsum.photos/seed/workshop/1200/800",
+      "imageHint": "woodworking workshop"
+    }
+  ]
+}
