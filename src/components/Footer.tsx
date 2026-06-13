@@ -1,20 +1,31 @@
 
 import Link from "next/link";
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-16 px-6 lg:px-12 mt-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div className="space-y-4">
+        <div className="space-y-6">
           <h3 className="text-2xl font-headline font-bold text-accent">Welis Root Wood</h3>
           <p className="text-sm text-primary-foreground/80 leading-relaxed">
             Doğadan gelen tasarımları, ustalığın zarafetiyle birleştirerek yaşam alanlarınıza taşıyoruz. 
             Doğal ahşabın sıcaklığını ve ruhunu keşfedin.
           </p>
           <div className="flex gap-4">
-            <Link href="https://instagram.com/welis.rootwood" className="hover:text-accent transition-colors">
-              <Instagram className="w-5 h-5" />
+            <Link 
+              href="https://instagram.com/welis.rootwood" 
+              target="_blank"
+              className="bg-white/10 p-3 rounded-xl hover:bg-accent hover:text-white transition-all hover:-translate-y-1"
+            >
+              <Instagram className="w-6 h-6" />
+            </Link>
+            <Link 
+              href="https://wa.me/905475717177" 
+              target="_blank"
+              className="bg-white/10 p-3 rounded-xl hover:bg-green-500 hover:text-white transition-all hover:-translate-y-1"
+            >
+              <MessageCircle className="w-6 h-6 fill-current" />
             </Link>
           </div>
         </div>
@@ -22,10 +33,10 @@ export function Footer() {
         <div>
           <h4 className="font-headline font-bold mb-6">Hızlı Bağlantılar</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/80">
-            <li><Link href="/products" className="hover:text-accent">Ürün Koleksiyonu</Link></li>
-            <li><Link href="/gallery" className="hover:text-gallery">Uygulama Galerisi</Link></li>
-            <li><Link href="/about" className="hover:text-accent">Hakkımızda</Link></li>
-            <li><Link href="/contact" className="hover:text-accent">İletişim</Link></li>
+            <li><Link href="/products" className="hover:text-accent transition-colors">Ürün Koleksiyonu</Link></li>
+            <li><Link href="/gallery" className="hover:text-accent transition-colors">Uygulama Galerisi</Link></li>
+            <li><Link href="/about" className="hover:text-accent transition-colors">Hakkımızda</Link></li>
+            <li><Link href="/contact" className="hover:text-accent transition-colors">İletişim</Link></li>
           </ul>
         </div>
 
@@ -51,7 +62,7 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-3 text-sm text-primary-foreground/80">
             <MapPin className="w-4 h-4 text-accent" />
-            <span>İstanbul, Türkiye</span>
+            <span>Konya, Türkiye</span>
           </div>
         </div>
       </div>

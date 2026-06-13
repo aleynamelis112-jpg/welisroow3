@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
+import { AIDesignAssistant } from "@/components/AIDesignAssistant";
 import { ALL_PRODUCTS } from "@/lib/products";
-import { ChevronRight, ArrowRight, ShieldCheck, Zap, Sparkles, MapPin } from "lucide-react";
+import { ChevronRight, ArrowRight, ShieldCheck, Zap, Sparkles, MapPin, Instagram, MessageCircle } from "lucide-react";
 
 export default function Home() {
   const heroImage = "/images/urun (1).jpg";
@@ -78,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* AI Assistant Section */}
-      
+      <AIDesignAssistant />
 
       {/* Featured Products */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30">
@@ -100,6 +101,34 @@ export default function Home() {
             {featuredProducts.map((p) => (
               <ProductCard key={p.id} {...p} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Follow Us Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-primary text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] -mr-48 -mt-48" />
+        <div className="max-w-7xl mx-auto text-center space-y-12 relative z-10">
+          <div className="space-y-4">
+            <h2 className="text-accent font-bold uppercase tracking-widest text-sm">Bize Ulaşın</h2>
+            <h3 className="text-4xl md:text-6xl font-headline font-bold">Bizi Takip Edin</h3>
+            <p className="text-xl text-primary-foreground/70 max-w-2xl mx-auto font-light leading-relaxed">
+              Yeni tasarımlarımızdan ve projelerimizden haberdar olmak için sosyal medyada yanımızda olun.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 transition-all duration-300 h-16 px-10 rounded-2xl font-bold flex gap-3 text-lg shadow-xl" asChild>
+              <Link href="https://instagram.com/welis.rootwood" target="_blank">
+                <Instagram className="w-6 h-6" />
+                Instagram'da Takip Et
+              </Link>
+            </Button>
+            <Button size="lg" className="w-full sm:w-auto bg-green-600 hover:bg-green-700 hover:scale-105 transition-all duration-300 h-16 px-10 rounded-2xl font-bold flex gap-3 text-lg shadow-xl" asChild>
+              <Link href="https://wa.me/905475717177" target="_blank">
+                <MessageCircle className="w-6 h-6 fill-current" />
+                WhatsApp ile İletişime Geç
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

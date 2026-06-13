@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, Instagram, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -77,13 +77,29 @@ export function Navigation() {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-4">
-            <Link href="/products" className="group">
-              <Search className={cn(
-                "w-5 h-5 cursor-pointer transition-colors group-hover:text-accent",
-                isScrolled ? "text-muted-foreground" : "text-white/80"
-              )} />
-            </Link>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4">
+              <Link 
+                href="https://instagram.com/welis.rootwood" 
+                target="_blank"
+                className={cn(
+                  "transition-all hover:scale-110",
+                  isScrolled ? "text-muted-foreground hover:text-accent" : "text-white/80 hover:text-accent"
+                )}
+              >
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link 
+                href="https://wa.me/905475717177" 
+                target="_blank"
+                className={cn(
+                  "transition-all hover:scale-110",
+                  isScrolled ? "text-muted-foreground hover:text-green-500" : "text-white/80 hover:text-green-400"
+                )}
+              >
+                <MessageCircle className="w-5 h-5" />
+              </Link>
+            </div>
             <Button className="bg-accent hover:bg-accent/90 text-white font-bold rounded-xl h-11 px-6 shadow-lg shadow-accent/20" asChild>
               <Link href="https://wa.me/905475717177">Hızlı Sipariş</Link>
             </Button>
@@ -120,11 +136,19 @@ export function Navigation() {
               </Link>
             ))}
             <hr className="border-primary/10" />
-            <div className="flex flex-col gap-4">
-               <Button className="w-full h-14 bg-primary text-white font-bold rounded-2xl" asChild>
-                <Link href="https://wa.me/905475717177">WhatsApp Sipariş</Link>
-              </Button>
+            <div className="flex items-center gap-6 px-2">
+               <Link href="https://instagram.com/welis.rootwood" target="_blank" className="flex items-center gap-2 text-primary font-bold">
+                 <Instagram className="w-6 h-6 text-accent" />
+                 Instagram
+               </Link>
+               <Link href="https://wa.me/905475717177" target="_blank" className="flex items-center gap-2 text-primary font-bold">
+                 <MessageCircle className="w-6 h-6 text-green-500" />
+                 WhatsApp
+               </Link>
             </div>
+            <Button className="w-full h-14 bg-primary text-white font-bold rounded-2xl" asChild>
+              <Link href="https://wa.me/905475717177">WhatsApp Sipariş</Link>
+            </Button>
           </div>
         </div>
       )}
