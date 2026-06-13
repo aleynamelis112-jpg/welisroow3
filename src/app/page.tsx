@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/ProductCard";
-import { AIDesignAssistant } from "@/components/AIDesignAssistant";
 import { ALL_PRODUCTS } from "@/lib/products";
 import { ChevronRight, ArrowRight, ShieldCheck, Zap, Sparkles, MapPin } from "lucide-react";
 
@@ -79,7 +78,7 @@ export default function Home() {
       </section>
 
       {/* AI Assistant Section */}
-      <AIDesignAssistant />
+      
 
       {/* Featured Products */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30">
